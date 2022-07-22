@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet">
+        .bgContainer{
+            width:600px;
+            margin: 200px auto;
+            background: rgba(0 0 0 / 61%);
+            /* box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 61%); */
+            padding: 50px 0;
+            transform: skewX(11deg) skewY(-9deg);
+            box-shadow: 10px 10px 5px #aaaaaa;
+        }
+        .bgImage::before{
+            content: '';
+            width: 260px;
+            border-top: 4px solid rgb(186, 186, 186);
+            position: absolute;
+            top: -2px;
+            border-radius: 10px 0 0 10px;
+            right: 0;
+        }
+        
+        .bgImage{
+            margin-top: 100px;
+            background-image: url(image/shutterstock_562801414.jpg);
+            width: 500px;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 61%);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: all-petite-caps;
+            
+        }
+        .bgImage::after{
+            content: '';
+            width: 260px;
+            border-top: 4px solid rgb(186, 186, 186);
+            position: absolute;
+            bottom: -2px;
+            border-radius: 0 10px 10px 0;
+            left: 0;
+        }
+        .porfolioTitle{
+            position:absolute ;
+            top:50%;
+            left:50%; 
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+        }
+        h3{
+            font-size: 2.5em;
+            font-weight: 500;
+            letter-spacing: 0.8em;
+            text-align: left;
+            margin: 0;
+        }
+        p{
+            font-size: 1.3em;
+            letter-spacing: .25em;
+            color: #9f5d12;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            z-index: 100;
+        }
+        svg:nth-child(2){
+            transform: rotateY(178deg) rotateX(180deg);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="bgContainer">
+            <svg height="600" width="600">
+                <polygon points="0,0 600,0 400,0 0,600" style="fill:rgb(0 0 0 / 61%);" />
+            </svg>
+            <svg height="600" width="600">
+                <polygon points="0,0 600,0 400,0 0,600" style="fill:rgb(0 0 0 / 61%);" />
+            </svg>
+            <section class="bgImage">
+                <div class="porfolioTitle">
+                    <h3> The porfolio</h3>
+                    <p>youyi rhode</p>
+                </div>
+            </section>
+        </div>
+   </main>
+</body>
+</html>
